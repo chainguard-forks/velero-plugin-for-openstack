@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        go-version: [ '1.22' ]
+        go-version: [ '1.23' ]
     steps:
       - name: Checkout velero-plugin-for-openstack
         uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        go-version: [ '1.22' ]
+        go-version: [ '1.23' ]
     steps:
       - name: Checkout velero-plugin-for-openstack
         uses: actions/checkout@v4
@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        go-version: [ '1.22' ]
+        go-version: [ '1.23' ]
     env:
       VELERO_CLI_VERSION: 1.11.0
       # Contains Velero 1.11.0
@@ -103,9 +103,9 @@ jobs:
           sudo mv "velero-v${VELERO_CLI_VERSION}-linux-amd64/velero" /usr/local/bin/velero
           chmod 750 /usr/local/bin/velero
       - name: Deploy DevStack
-        uses: EmilienM/devstack-action@v0.14
+        uses: gophercloud/devstack-action@v0.19
         with:
-          branch: 'stable/2023.2'
+          branch: 'stable/2024.2'
           enable_workaround_docker_io: 'false'
           conf_overrides: |
             SWIFT_ENABLE_TEMPURLS=True
@@ -117,7 +117,7 @@ jobs:
 
             CINDER_ISCSI_HELPER=tgtadm
 
-            enable_plugin manila https://github.com/openstack/manila stable/2023.2
+            enable_plugin manila https://github.com/openstack/manila stable/2024.2
             # LVM Backend config options
             MANILA_SERVICE_IMAGE_ENABLED=False
             SHARE_DRIVER=manila.share.drivers.lvm.LVMShareDriver
