@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.3
 
 # --- First stage
-FROM --platform=$BUILDPLATFORM golang:1.22-alpine AS build
+FROM --platform=$BUILDPLATFORM golang:1.22-alpine@sha256:1699c10032ca2582ec89a24a1312d986a3f094aed3d5c1147b19880afe40e052 AS build
 
 ARG REPOSITORY=Lirt
 ARG PLUGIN=velero-plugin-for-openstack
@@ -34,7 +34,7 @@ RUN export LDFLAGS="-X ${PKG}/src/utils.Version=${VERSION} -X ${PKG}/src/utils.G
       .
 
 # --- Second stage
-FROM alpine:3
+FROM alpine:3@sha256:865b95f46d98cf867a156fe4a135ad3fe50d2056aa3f25ed31662dff6da4eb62
 RUN mkdir /plugins
 COPY --from=build /go/bin/${PLUGIN} /plugins/
 USER nobody:nogroup
