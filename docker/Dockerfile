@@ -1,11 +1,11 @@
 # syntax=docker/dockerfile:1.3
 
 # --- First stage
-FROM --platform=$BUILDPLATFORM golang:1.22-alpine AS build
+FROM --platform=$BUILDPLATFORM golang:1.23-alpine AS build
 
-ARG REPOSITORY=Lirt
+ARG REPOSITORY=chainguard-forks
 ARG PLUGIN=velero-plugin-for-openstack
-ARG PKG=github.com/Lirt/velero-plugin-for-openstack
+ARG PKG=github.com/chainguard-forks/velero-plugin-for-openstack
 ARG VERSION=0.0.0
 ARG GIT_SHA=nil
 
