@@ -3,9 +3,9 @@
 # --- First stage
 FROM --platform=$BUILDPLATFORM golang:1.25-alpine AS build
 
-ARG REPOSITORY=Lirt
+ARG REPOSITORY=chainguard-forks
 ARG PLUGIN=velero-plugin-for-openstack
-ARG PKG=github.com/Lirt/velero-plugin-for-openstack
+ARG PKG=github.com/chainguard-forks/velero-plugin-for-openstack
 ARG VERSION=0.0.0
 ARG GIT_SHA=nil
 

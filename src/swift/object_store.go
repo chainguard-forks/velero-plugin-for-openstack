@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Lirt/velero-plugin-for-openstack/src/utils"
+	"github.com/chainguard-forks/velero-plugin-for-openstack/src/utils"
 	"github.com/gophercloud/gophercloud/v2"
 	"github.com/gophercloud/gophercloud/v2/openstack"
 	"github.com/gophercloud/gophercloud/v2/openstack/objectstorage/v1/objects"

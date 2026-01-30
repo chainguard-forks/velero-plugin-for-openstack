@@ -1,4 +1,4 @@
-module github.com/Lirt/velero-plugin-for-openstack
+module github.com/chainguard-forks/velero-plugin-for-openstack
 
 go 1.25
 

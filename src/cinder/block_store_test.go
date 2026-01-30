@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/Lirt/velero-plugin-for-openstack/src/testhelper"
+	"github.com/chainguard-forks/velero-plugin-for-openstack/src/testhelper"
 	th "github.com/gophercloud/gophercloud/v2/testhelper"
 	fakeClient "github.com/gophercloud/gophercloud/v2/testhelper/client"
 	"github.com/sirupsen/logrus"
